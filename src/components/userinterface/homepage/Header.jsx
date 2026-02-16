@@ -26,19 +26,11 @@ export default function Header() {
         </ul>
 
         
-        <div className="menu-icon" onClick={() => setOpen(!open)}>
-          ☰
-        </div>
+       
       </div>
 
       
-      {open && (
-        <div className="mobile-menu">
-          <div onClick={() => navigate("/")}>Home</div>
-          <div>About Us</div>
-          <div>Register</div>
-        </div>
-      )}
+     
 
       {/* STYLES */}
       <style>{`
