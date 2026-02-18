@@ -15,7 +15,7 @@ export default function Body()
 
           <div className="col-md-6">
 
-            <h1 style={{fontFamily: "Georgia, serif",fontWeight: "700",fontSize: "48px",color: "#8B0000",lineHeight: "1.2"}}>
+            <h1  className="fw-bold display-6 display-md-4" style={{fontFamily: "Georgia, serif",fontWeight:700,color: "#8B0000",lineHeight: "1.3"}}>
               Where Tradition <br /> Meets Destiny
             </h1>
 

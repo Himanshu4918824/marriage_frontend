@@ -55,18 +55,22 @@ export default function Footer() {
               </span>
             </div>
 
-            <div style={{marginTop:50}}>
-              <Link to="https://creovateio.in" style={{textDecoration: 'none' , color:'inherit'}} >
-                <div style={{ padding: 5, display: "flex", alignItems: "center", marginTop: 5, textAlign: 'center', marginBottom: 2, justifyContent: 'center', cursor: 'pointer' }}>
-                  <img src="https://creovate-io.vercel.app/android-chrome-512x512.png" height={60} width={60} alt="" />
-                  <h1 style={{ fontFamily: 'fantasy', letterSpacing: 1, textTransform: 'uppercase', fontWeight: "lighter" }}>CreovateIO</h1>
-                </div>
-              </Link>
-               <p style={{ textAlign: 'center', fontWeight: "bolder" }}>WE BUILD TRUST & Contact Us:+91 6265511439</p>
-               <p></p>
-           </div>
         </div>
 
+        </div>
+
+        <div className="row">
+          <div className="col-lg-6"></div>
+          <div className="col-lg-4"></div>
+          <div className="col-lg-2">
+             <Link to="https://creovateio.in" style={{textDecoration: 'none' , color:'inherit'}} >
+                <div style={{ fontSize:16,padding: 5, display: "flex", alignItems: "center", marginTop: 5, textAlign: 'center', marginBottom: 2, justifyContent: 'center', cursor: 'pointer' }}>
+                  <img src="https://creovate-io.vercel.app/android-chrome-512x512.png" height={50} width={50} alt="" />
+                  <h1 style={{ fontFamily: 'Newsreader', letterSpacing: 1, textTransform: 'uppercase', fontWeight: "lighter",fontSize:18,margin:2 }}>CreovateIO</h1>
+                </div>
+              </Link>
+               <p style={{ textAlign: 'center', fontWeight: "bolder",fontSize:14 }}>WE BUILD TRUST & Contact Us:+91 6265511439</p>
+          </div>
         </div>
 
         

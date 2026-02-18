@@ -12,7 +12,7 @@ export default function Header() {
        
         <div onClick={() => navigate("/")} style={{ display: "flex", alignItems: "center", cursor: "pointer" }} >
           <img src={logo} alt="logo" style={{ width: 45, height: 45 }} />
-          <div style={{ fontSize: 24, fontWeight: "bold", marginLeft: 10,fontFamily:'Newsreader' }}>
+          <div className="fw-bold fs-5 fs-md-4" style={{  fontWeight: "bold", marginLeft: 10,fontFamily:'Newsreader' }}>
              Leela Facility & Marriage Bureau
           </div>
         </div>
