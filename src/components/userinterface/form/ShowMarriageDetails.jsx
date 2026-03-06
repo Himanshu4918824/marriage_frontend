@@ -6,7 +6,7 @@ export default function ShowJobDetails() {
   const [marriage, setMarriage] = useState([]);
 
         const fetchMarriageData=async()=>{
-            var result=await getData('api/getMarriageEntries')
+            var result=await getData('getMarriageEntries')
             setMarriage(result.data)
         }
 

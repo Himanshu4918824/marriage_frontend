@@ -32,7 +32,7 @@ export default function Job()
             formDataObj[key] = value;
         });
 
-        var result=await postData('api/carrers',formDataObj);
+        var result=await postData('carrers',formDataObj);
           if (result.status) {
                 Swal.fire({
                     position: "top-end",
