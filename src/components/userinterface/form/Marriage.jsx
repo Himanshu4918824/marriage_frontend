@@ -59,7 +59,7 @@ export default function Marriage() {
         });
 
         var result=await postData('marriage',formDataObj);
-        alert(1)
+        // alert(1)
           if (result.status) {
                 Swal.fire({
                     position: "top-end",
