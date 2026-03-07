@@ -18,66 +18,67 @@ export default function Marriage() {
   const [rang, setRang] = useState('');
   const [weight, setWeight] = useState('');
   const [ghar, setGhar] = useState('');
-  const [disabilities , setDisabilities ] = useState('');
+  const [disabilities, setDisabilities] = useState('');
   const [salary, setSalary] = useState('');
   const [maPa, setMaPa] = useState('');
 
   const [mobile, setMobile] = useState('');
   const [address, setAddress] = useState('');
-  const [land,setLand]=useState('');
+  const [land, setLand] = useState('');
 
 
-    const handleSave=async()=>{
-       // alert(1)
-        var formData=new FormData();
-        
-        formData.append('name',name);
-        formData.append('fatherName',father);
-        formData.append('caste',jati);
-        formData.append('subCaste',got);
-        formData.append('dateOfBirth',dob);
-        formData.append('height',height);
+  const handleSave = async () => {
+    // alert(1)
+    let formData = new FormData();
 
-        formData.append('education',education);
-        formData.append('maritalStatus',marriageStatus);
-        formData.append('profession',work);
-        formData.append('color',rang);
-        formData.append('weight',weight);
+    formData.append('name', name);
+    formData.append('fatherName', father);
+    formData.append('caste', jati);
+    formData.append('subCaste', got);
+    formData.append('dateOfBirth', dob);
+    formData.append('height', height);
 
-        formData.append('cityOrPlace',ghar);
-        formData.append('disabilities ',disabilities);
-        formData.append('expectedPartnerAge',salary);
-        formData.append('maternalUncleProfession',maPa);
-        formData.append('mobileNo',mobile);
-        formData.append('land',land);
-        formData.append('address',address);
+    formData.append('education', education);
+    formData.append('maritalStatus', marriageStatus);
+    formData.append('profession', work);
+    formData.append('color', rang);
+    formData.append('weight', weight);
 
-         const formDataObj = {};
+    formData.append('cityOrPlace', ghar);
+    formData.append('disabilities', disabilities);
+    formData.append('expectedPartnerAge', salary);
+    formData.append('maternalUncleProfession', maPa);
+    formData.append('mobileNo', mobile);
+    formData.append('land', land);
+    formData.append('address', address);
 
-        formData.forEach((value, key) => {
-            formDataObj[key] = value;
-        });
+    const formDataObj = {};
 
-        var result=await postData('marriage',formDataObj);
-        // alert(1)
-          if (result.status) {
-                Swal.fire({
-                    position: "top-end",
-                    icon: "success",
-                    title: "Data Submit Successfully",
-                    showConfirmButton: false,
-                    timer: 2000
-                });
-            }
-            else {
-                Swal.fire({
-                    position: "top-end",
-                    icon: "error",
-                    title: "Your work has been not saved",
-                    showConfirmButton: false,
-                    timer: 2000
-                });
-            }
+    formData.forEach((value, key) => {
+      formDataObj[key] = value;
+    });
+    console.log(formDataObj)
+    let result = await postData('marriage', formDataObj);
+    console.log(result)
+    // alert(1)
+    if (result.status) {
+      Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "Data Submit Successfully",
+        showConfirmButton: false,
+        timer: 2000
+      });
+    }
+    else {
+      Swal.fire({
+        position: "top-end",
+        icon: "error",
+        title: "Your work has been not saved",
+        showConfirmButton: false,
+        timer: 2000
+      });
+    }
 
 
   }
@@ -159,7 +160,7 @@ export default function Marriage() {
               value={marriageStatus}
               onChange={(e) => setMarriageStatus(e.target.value)}
             >
-              <option  value=''>वैवाहिक स्थिति चुनें</option>
+              <option value=''>वैवाहिक स्थिति चुनें</option>
               <option value="अविवाहित">अविवाहित</option>
               <option value="विवाहित">विवाहित</option>
               <option value="तलाक">तलाक</option>
@@ -197,7 +198,7 @@ export default function Marriage() {
             <div className="col-md-6 mt-2">
               <label className="form-label fw-semibold">सामान्य / विकलांग</label>
               {/* <input value={disabilities } onChange={(e) => setDisabilities(e.target.value)} type="text" className="form-control" placeholder="सामान्य / विकलांग" /> */}
-            
+
               <select
                 className="form-control"
                 value={disabilities}

@@ -13,10 +13,10 @@ export default function ShowJobDetails() {
 
 
   const fetchJobData = async () => {
-    var result = await getData('getCarrerEntries')
+    let result = await getData('getCarrerEntries')
     setJob(result.data)
   }
-  
+
   useEffect(() => {
     fetchJobData();
   }, [])
@@ -43,7 +43,7 @@ export default function ShowJobDetails() {
           </tr>
         </thead>
         <tbody>
-          
+
           {
             job.length > 0 ? (
 
@@ -52,7 +52,7 @@ export default function ShowJobDetails() {
 
                   <td className="text-center">{i + 1}</td>
                   <td className="text-center">{item.name}</td>
-                  <td className="text-center">{item.village}</td>
+                  <td className="text-center">{item.cast}</td>
                   <td className="text-center">{item.age}</td>
                   <td className="text-center">{item.education}</td>
                   <td className="text-center">{item.workExperience}</td>

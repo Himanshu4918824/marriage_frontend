@@ -5,10 +5,10 @@ import { getData } from "../../../services/FetchNodeAdminServices";
 export default function ShowJobDetails() {
   const [marriage, setMarriage] = useState([]);
 
-        const fetchMarriageData=async()=>{
-            var result=await getData('getMarriageEntries')
-            setMarriage(result.data)
-        }
+  const fetchMarriageData = async () => {
+    let result = await getData('getMarriageEntries')
+    setMarriage(result.data)
+  }
 
 
   useEffect(() => {
@@ -72,7 +72,7 @@ export default function ShowJobDetails() {
                   <td className="text-center">{item.weight}</td>
 
                   <td className="text-center">{item.ghar}</td>
-                  <td className="text-center">{item.disabilities }</td>
+                  <td className="text-center">{item.disabilities}</td>
                   <td className="text-center">{item.expectedPartnerAge}</td>
                   <td className="text-center">{item.maternalUncleProfession}</td>
                   <td className="text-center">{item.mobileNo}</td>
