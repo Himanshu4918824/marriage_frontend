@@ -57,11 +57,11 @@ export default function Marriage() {
     formData.forEach((value, key) => {
       formDataObj[key] = value;
     });
-    console.log(formDataObj)
+    // console.log(formDataObj)
     let result = await postData('marriage', formDataObj);
-    console.log(result)
+    // console.log(result)
     // alert(1)
-    if (result.status) {
+    if (result.data) {
       Swal.fire({
         position: "top-end",
         icon: "success",
