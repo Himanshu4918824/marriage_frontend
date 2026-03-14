@@ -4,10 +4,10 @@ import { getData } from "../../../services/FetchNodeAdminServices";
 export default function ShowJobDetails() {
   const [marriage, setMarriage] = useState([]);
 
-        const fetchMarriageData=async()=>{
-            var result=await getData('api/getMarriageEntries')
-            setMarriage(result.data)
-        }
+  const fetchMarriageData = async () => {
+    let result = await getData('getMarriageEntries')
+    setMarriage(result.data)
+  }
 
 
   useEffect(() => {
